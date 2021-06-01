@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator {
+  margin: 65px auto;
+  width: 600px;
+  height: 800px;
+  background-color: lightblue;
+  border: 1px solid black;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "screen screen screen screen"
+    "numpad numpad numpad operator"
+    "numpad numpad numpad operator"
+    "numpad numpad numpad operator"
+    "numpad numpad numpad operator";
+}
+
+.screen {
+  grid-area: screen;
+  align-self: center;
+  justify-self: center;
+  background-color: rgb(247, 247, 247);
+  width: 550px;
+  height: 100px;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.23);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.numContainer {
+  margin: 15px;
+  font-size: 4rem;
+}
+
+.numpad {
+  grid-area: numpad;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+}
+.numBtn {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+  font-size: 5rem;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 5px 5px 15px 3px rgba(0, 0, 0, 0.23);
+  border: 1px solid black;
+}
+.numBtn:hover {
+  cursor: pointer;
+}
+#clear {
+  background-color: rgb(255, 111, 111);
+}
+
+.operators {
+  grid-area: operator;
+  margin: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
